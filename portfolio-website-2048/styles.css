@@ -77,7 +77,7 @@ footer {
   margin: 0 auto; /* Центрує форму по горизонталі */
   max-width: 500px; /* Обмежує ширину форми */
   padding: 20px; /* Додає відступи навколо форми */
-  margin-bottom: 100px; /*Додає відступ після форми */
+  margin-bottom: 50px; /*Додає відступ після форми */
 }
 
 #contact form div {
