@@ -10,6 +10,21 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 document.getElementById("backToTop").addEventListener("click", function() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    scrollToTop(1000); // Прокрутка до верху за 1000 мілісекунд (1 секунда)
 });
+
+function scrollToTop(duration) {
+    const startingY = window.pageYOffset;
+    const startTime = performance.now();
+
+    function step(time) {
+        const normalizedTime = (time - startTime) / duration;
+        if (normalizedTime > 1) {
+            window.scrollTo(0, 0);
+            return;
+        }
+        window.scrollTo(0, startingY * (1 - Math.pow(normalizedTime, 4)));
+        requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+}
