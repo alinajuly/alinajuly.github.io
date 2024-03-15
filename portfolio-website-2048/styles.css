@@ -123,9 +123,8 @@ button:hover {
 
 #backToTop {
   position: fixed;
-  bottom: 20px;
+  bottom: 100px;
   right: 20px;
-  font-size: 24px;
-  cursor: pointer;
   font-size: 50px;
+  cursor: pointer;
 }
