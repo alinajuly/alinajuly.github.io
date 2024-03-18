@@ -14,9 +14,10 @@ main {
   text-align: center;
 }
 
-.footer {
+footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  padding: 20px; /* Додатковий стиль для відступів футера */
+  width: 100%; /* Розтягуємо футер на всю ширину вікна */
+  text-align: center;
+  padding: 20px;
 }
