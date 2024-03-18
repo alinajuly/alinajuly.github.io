@@ -1,19 +1,22 @@
-/* styles.css */
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden; /* Додано для уникнення горизонтального прокручування */
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Заборона горизонтального скролінгу */
 }
 
 main {
-  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: calc(100vh - 160px); /* Встановлюємо висоту main так, щоб врахувати висоту header і footer */
+  margin: 0;
   text-align: center;
 }
 
 .footer {
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px; /* Додатковий стиль для відступів футера */
 }
