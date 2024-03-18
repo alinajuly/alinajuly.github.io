@@ -1,23 +1,23 @@
-body {
+body, html {
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Заборона горизонтального скролінгу */
+  position: relative;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 160px); /* Встановлюємо висоту main так, щоб врахувати висоту header і footer */
+  min-height: 100vh; /* Займає весь доступний простір висоти екрану */
   margin: 0;
   text-align: center;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%; /* Розтягуємо футер на всю ширину вікна */
   text-align: center;
-  padding: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
