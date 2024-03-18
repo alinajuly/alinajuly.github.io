@@ -1,14 +1,19 @@
+/* styles.css */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden; /* Додано для уникнення горизонтального прокручування */
+}
+
 main {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
   text-align: center;
 }
 
 .footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  margin-top: auto;
 }
