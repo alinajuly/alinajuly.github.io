@@ -6,3 +6,9 @@ main {
   margin: 0;
   text-align: center;
 }
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
