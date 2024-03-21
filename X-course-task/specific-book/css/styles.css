@@ -19,6 +19,12 @@ main {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  main {
+    padding-bottom: 60px; /* додаємо відповідний відступ знизу main, щоб уникнути перекриття футером */
+  }
+}
+
 input[type="number"] {
   width: fit-content; /* Робимо ширину поля введення відповідно до його вмісту */
 }
