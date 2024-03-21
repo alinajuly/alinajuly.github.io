@@ -48,17 +48,20 @@ footer {
     font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
   }
 
-  img.avatar {
+  .avatar {
     width: 200px;
     height: 200px;
   }
 
-  /* Розтягнення кнопки та поля для вводу на всю ширину екрану з відступами по бокам */
-  input[type="text"],
-  button {
+  .col-md-4 {
+    max-width: 100%;
+  }
+  
+  .form-control,
+  .btn {
     width: 100%;
-    margin-left: 8px; /* Відступ зліва */
-    margin-right: 8px; /* Відступ справа */
+    margin-left: 8px;
+    margin-right: 8px;
   }
 }
 
@@ -71,15 +74,17 @@ footer {
     font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
   }
 
-  /* Збільшення розмірів зображення */
-  img.avatar {
+  .avatar {
     width: 200px;
     height: 200px;
   }
 
-  /* Розтягнення кнопки та поля для вводу на всю ширину екрану з відступами по бокам */
-  input[type="text"],
-  button {
+  .col-md-4 {
+    max-width: 100%;
+  }
+  
+  .form-control,
+  .btn {
     width: 100%;
     margin-left: 8px;
     margin-right: 8px;
