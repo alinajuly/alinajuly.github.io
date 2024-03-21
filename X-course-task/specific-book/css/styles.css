@@ -19,12 +19,6 @@ main {
   text-align: center;
 }
 
-@media (max-width: 767px) {
-  main {
-    padding-bottom: 60px; /* додаємо відповідний відступ знизу main, щоб уникнути перекриття футером */
-  }
-}
-
 input[type="number"] {
   width: fit-content; /* Робимо ширину поля введення відповідно до його вмісту */
 }
@@ -33,4 +27,24 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-bottom: 60px; /* додаємо відповідний відступ знизу main, щоб уникнути перекриття футером */
+  }
+
+  .navbar-brand {
+    font-size: 18px; /* Зменшуємо розмір шрифту для назви в бренді */
+  }
+
+  .form-control {
+    font-size: 14px; /* Зменшуємо розмір шрифту для полів введення */
+    padding: 0.375rem 0.75rem; /* Зменшуємо внутрішні відступи для полів введення */
+  }
+
+  .btn {
+    font-size: 14px; /* Зменшуємо розмір шрифту для кнопок */
+    padding: 0.375rem 0.75rem; /* Зменшуємо внутрішні відступи для кнопок */
+  }
 }
