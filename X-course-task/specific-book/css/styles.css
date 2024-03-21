@@ -23,7 +23,8 @@ input[type="number"] {
   width: fit-content; /* Робимо ширину поля введення відповідно до його вмісту */
 }
 
-
 footer {
-  margin-top: auto; /* Розмістити футер внизу сторінки */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

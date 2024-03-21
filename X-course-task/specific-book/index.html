@@ -10,78 +10,71 @@
   <script src="https://kit.fontawesome.com/34eea1afad.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./images/icon.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
-          BOOK STORE / Alina Cheriapkina
-        </a>
-        <div class="d-flex gap-4 justify-content-end align-items-center">
-          <form class="d-flex me-2" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-warning" type="submit">Search</button>
-          </form>
-          <i class="fa-solid fa-cart-shopping fa-3x" style="color: #FFD43B;"></i>
-          <form class="me-2">
-            <button class="btn btn-outline-warning" type="button">Sign-Out</button>
-          </form>
-          <img src="./images/avatar.png" width="50" alt="avatar">
-          <span id="username" style="color: #fff;">Username</span>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="container mt-5">
-      <div class="row">
-        <!-- Колонка з зображенням -->
-        <div class="col-md-3">
-          <!-- Image -->
-          <img src="book_image.jpg" alt="Book Image">
-        </div>
-    
-        <!-- Колонка з інформацією про книгу -->
-        <div class="col-md-6">
-          <!-- Book Information -->
-          <div class="mb-3">
-            <h2>Book Name</h2>
-            <h3>Book Author</h3>
-            <p>Description of the book goes here...</p>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./images/icon.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
+            BOOK STORE / Alina Cheriapkina
+          </a>
+          <div class="d-flex gap-4 justify-content-end align-items-center">
+            <form class="d-flex me-2" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Search</button>
+            </form>
+            <i class="fa-solid fa-cart-shopping fa-3x" style="color: #FFD43B;"></i>
+            <form class="me-2">
+              <button class="btn btn-outline-warning" type="button">Sign-Out</button>
+            </form>
+            <img src="./images/avatar.png" width="50" alt="avatar">
+            <span id="username" style="color: #fff;">Username</span>
           </div>
         </div>
-        
-        <!-- Колонка з формою для додавання в кошик -->
-        <div class="col-md-3">
-          <!-- Form for adding to cart -->
-          <div class="mb-3">
-            <label for="price" class="form-label">Price</label>
-            <p id="price">100</p>
+      </nav>
+    </header>
+    <main>
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Перша секція -->
+          <div class="col-md-10">
+            <div class="row">
+              <!-- Колонка з зображенням -->
+              <div class="col-md-2">
+                <img src="book_image.jpg" alt="Book Image">
+              </div>
+              <!-- Колонка з інформацією про книгу -->
+              <div class="col-md-10">
+                <h2>Book Name</h2>
+                <h3>Book Author</h3>
+                <p>Description of the book goes here...</p>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="countInput" class="form-label">Count</label>
-            <input type="number" class="form-control form-control-sm w-25" id="countInput" min="1">
-          </div>
-          <div class="mb-3">
-            <label for="totalPrice" class="form-label">Total Price</label>
-            <p id="totalPrice">100</p>
-          </div>
-          <div class="mb-3">
-            <button type="button" class="btn btn-warning btn-block">Add to Cart</button>
+          <!-- Друга секція -->
+          <div class="col-md-2">
+            <!-- Колонка з формою для додавання в кошик -->
+            <div class="col-md-12">
+              <label for="price" class="form-label">Price</label>
+              <p id="price">100</p>
+              <label for="countInput" class="form-label">Count</label>
+              <input type="number" class="form-control form-control-sm w-25" id="countInput" min="1">
+              <label for="totalPrice" class="form-label">Total Price</label>
+              <p id="totalPrice">100</p>
+              <button type="button" class="btn btn-warning btn-block">Add to Cart</button>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-  <footer>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">
-          &copy; 2024 My Course project for Prometheus. All rights reserved.
-        </span>
-      </div>
-    </nav>
-  </footer>  
+    </main>
+    <footer>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">
+            &copy; 2024 My Course project for Prometheus. All rights reserved.
+          </span>
+        </div>
+      </nav>
+    </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
