@@ -39,11 +39,11 @@
           <div class="col-md-10">
             <div class="row">
               <!-- Колонка з зображенням -->
-              <div class="col-md-2">
-                <img src="book_image.jpg" alt="Book Image">
+              <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img src="../images/books/react_up_and_running_2nd_edition.jpg" alt="Book Image" class="img-fluid">
               </div>
               <!-- Колонка з інформацією про книгу -->
-              <div class="col-md-10">
+              <div class="col-md-8 text-start">
                 <h2>Book Name</h2>
                 <h3>Book Author</h3>
                 <p>Description of the book goes here...</p>
@@ -53,11 +53,11 @@
           <!-- Друга секція -->
           <div class="col-md-2">
             <!-- Колонка з формою для додавання в кошик -->
-            <div class="col-md-12">
+            <div class="col-md-12 text-start">
               <label for="price" class="form-label">Price</label>
               <p id="price">100</p>
               <label for="countInput" class="form-label">Count</label>
-              <input type="number" class="form-control form-control-sm w-25" id="countInput" min="1">
+              <input type="number" class="form-control form-control-sm w-50 mb-3" id="countInput" min="1">
               <label for="totalPrice" class="form-label">Total Price</label>
               <p id="totalPrice">100</p>
               <button type="button" class="btn btn-warning btn-block">Add to Cart</button>
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-    </main>
+    </main>    
     <footer>
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
