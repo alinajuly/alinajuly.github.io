@@ -24,7 +24,7 @@ input[type="number"] {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -32,6 +32,16 @@ footer {
 @media (max-width: 767px) {
   main {
     padding-bottom: 60px; /* додаємо відповідний відступ знизу main, щоб уникнути перекриття футером */
+  }
+
+  .navbar {
+    padding: 0; /* Видаляємо внутрішні відступи */
+    margin: 0; /* Видаляємо зовнішні відступи */
+  }
+
+  .container-fluid {
+    padding-right: 0; /* Видаляємо правий внутрішній відступ */
+    padding-left: 0; /* Видаляємо лівий внутрішній відступ */
   }
 
   .navbar-brand {
