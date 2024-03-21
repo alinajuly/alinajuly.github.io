@@ -117,11 +117,15 @@ footer {
     height: 200px;
   }
 
-  .input,
+  .input-wrapper,
   .btn {
-    width: 100%;
     margin-left: 8px;
     margin-right: 8px;
+    width: calc(100% - 16px); /* ширина елементу за мінусом відступів */
+  }
+
+  input[type="text"] {
+    width: 100%;
   }
 }
 
@@ -139,10 +143,14 @@ footer {
     height: 200px;
   }
 
-  .input,
+  .input-wrapper,
   .btn {
-    width: 100%;
     margin-left: 8px;
     margin-right: 8px;
+    width: calc(100% - 16px); /* ширина елементу за мінусом відступів */
+  }
+
+  input[type="text"] {
+    width: 100%;
   }
 }
