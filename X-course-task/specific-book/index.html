@@ -54,13 +54,33 @@
           <div class="col-md-2">
             <!-- Колонка з формою для додавання в кошик -->
             <div class="col-md-12 text-start">
-              <label for="price" class="form-label">Price</label>
-              <p id="price">100</p>
-              <label for="countInput" class="form-label">Count</label>
-              <input type="number" class="form-control form-control-sm w-50 mb-3" id="countInput" min="1">
-              <label for="totalPrice" class="form-label">Total Price</label>
-              <p id="totalPrice">100</p>
-              <button type="button" class="btn btn-warning btn-block">Add to Cart</button>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="price" class="form-label">Price</label>
+                </div>
+                <div class="col-md-6">
+                  <p id="price" class="float-end">100</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="countInput" class="form-label">Count</label>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <input type="number" class="form-control form-control-sm mb-3" id="countInput" min="1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="totalPrice" class="form-label">Total Price</label>
+                </div>
+                <div class="col-md-6">
+                  <p id="totalPrice" class="float-end">100</p>
+                </div>
+              </div>
+              <button type="button" class="btn btn-warning btn-block float-end">Add to Cart</button>
             </div>
           </div>
         </div>
