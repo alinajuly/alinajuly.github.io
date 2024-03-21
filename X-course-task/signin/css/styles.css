@@ -53,13 +53,20 @@ footer {
     height: 200px;
   }
 
-  .col-md-4 {
-    max-width: 100%;
+  input[type="text"] {
+    width: 100%; 
+    margin-left: 8px;
+    margin-right: 8px;
+  }  
+
+  .stretched-input {
+    width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
   }
   
-  .form-control,
-  .btn {
-    width: 100%;
+  .stretched-btn {
+    width: 100%; 
     margin-left: 8px;
     margin-right: 8px;
   }
@@ -79,14 +86,21 @@ footer {
     height: 200px;
   }
 
-  .col-md-4 {
-    max-width: 100%;
-  }
-  
-  .form-control,
-  .btn {
+  input[type="text"] {
     width: 100%;
     margin-left: 8px;
     margin-right: 8px;
   }
+
+  .stretched-input {
+    width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  
+  .stretched-btn {
+    width: 100%; 
+    margin-left: 8px;
+    margin-right: 8px;
+  }  
 }
