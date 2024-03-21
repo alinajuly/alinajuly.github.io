@@ -21,16 +21,17 @@
   </header>
   <main>
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-4">
-          <form>
-            <!-- <form action="/" method="post"> -->
-            <img src="./images/avatar.png" width="160" alt="avatar" class="mb-3">
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input type="text" class="form-control stretched-input" id="username" placeholder="type Username">
+      <div class="row">
+        <div class="col">
+          <form class="form">
+            <div class="avatar-wrapper">
+              <img src="./images/avatar.png" width="160" alt="avatar" class="avatar">
+              <label for="username" class="label">Username</label>
             </div>
-            <button type="submit" class="btn btn-warning stretched-btn">Sign-In</button>
+            <div class="input-wrapper">
+              <input type="text" class="input" id="username" placeholder="type Username">
+            </div>
+            <button type="submit" class="btn">Sign-In</button>
           </form>
         </div>
       </div>

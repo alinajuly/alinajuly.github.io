@@ -19,6 +19,70 @@ main {
   text-align: center;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  width: 100%;
+  max-width: 320px;
+}
+
+.form {
+  margin-top: 50px;
+}
+
+.avatar-wrapper {
+  text-align: center;
+}
+
+.avatar {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.label {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  margin-bottom: 15px;
+}
+
+.input {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  width: 200px;
+  padding: 10px;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffc107;
+  transform: scale(1.05); /* збільшує розмір кнопки на 5% */
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -53,20 +117,9 @@ footer {
     height: 200px;
   }
 
-  input[type="text"] {
-    width: 100%; 
-    margin-left: 8px;
-    margin-right: 8px;
-  }  
-
-  .stretched-input {
+  .input,
+  .btn {
     width: 100%;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  
-  .stretched-btn {
-    width: 100%; 
     margin-left: 8px;
     margin-right: 8px;
   }
@@ -86,21 +139,10 @@ footer {
     height: 200px;
   }
 
-  input[type="text"] {
+  .input,
+  .btn {
     width: 100%;
     margin-left: 8px;
     margin-right: 8px;
   }
-
-  .stretched-input {
-    width: 100%;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  
-  .stretched-btn {
-    width: 100%; 
-    margin-left: 8px;
-    margin-right: 8px;
-  }  
 }
