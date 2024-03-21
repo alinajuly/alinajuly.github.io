@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Заборона горизонтального скролінгу */
-  height: 100%; /* Для використання flexbox потрібно встановити висоту на всю сторінку */
+  height: 100%;
 }
 
 body {
@@ -35,42 +35,42 @@ footer {
   }
 
   .footer-brand {
-    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
+    font-size: 0.8rem;
   }
 
   .form-control {
-    font-size: 1rem; /* Збільшуємо розмір шрифту для поля введення */
-    padding: 0.5rem 1rem; /* Збільшуємо внутрішній відступ для поля введення */
-    padding-right: 0; /* Видаляємо правий внутрішній відступ */
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    padding-right: 0;
   }
 
   .fa-cart-shopping {
-    transform: scale(0.7); /* Зменшуємо масштаб іконки кошика */
-    color: #FFD43B; /* Зберігаємо колір */
-    margin-right: 0; /* Видаляємо відступи з правого боку */
-    padding-right: 0; /* Видаляємо правий внутрішній відступ */
-    padding-left: 0; /* Видаляємо лівий внутрішній відступ */
+    transform: scale(0.7);
+    color: #FFD43B;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .btn {
-    padding: 0.3rem 0.5rem; /* Зменшуємо відступи кнопок */
-    font-size: 0.8rem; /* Зменшуємо розмір шрифту кнопок */
-    padding-right: 0; /* Видаляємо правий внутрішній відступ */
-    padding-left: 0; /* Видаляємо лівий внутрішній відступ */
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .btn-block.float-end {
+    width: 100%;
+    font-size: 100%;
   }
 
   #username {
-    font-size: 0.8rem; /* Зменшуємо розмір шрифту для ім'я користувача */
-    margin-right: 0.5rem; /* Додаємо відступи з правого боку */
-    padding-left: 0; /* Видаляємо лівий внутрішній відступ */
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    padding-left: 0;
   }
 
-  .gap-4 {
-    gap: 0.5rem; /* Зменшуємо відстань між елементами */
-  }
-
-  /* Зменшуємо зображення аватара */
-  img {
-    max-width: 30px; /* Встановлюємо максимальну ширину для збільшення пропорційно */
+  img.avatar {
+    max-width: 30px;
   }
 }

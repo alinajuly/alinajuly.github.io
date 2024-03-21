@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Заборона горизонтального скролінгу */
-  height: 100%; /* Для використання flexbox потрібно встановити висоту на всю сторінку */
+  height: 100%;
 }
 
 body {
@@ -19,6 +19,20 @@ main {
   text-align: center;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 200px;
+}
+
+button {
+  width: 200px;
+}
+
 footer {
   position: relative;
   bottom: 0;
@@ -32,5 +46,42 @@ footer {
 
   .footer-brand {
     font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
+  }
+
+  img.avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Розтягнення кнопки та поля для вводу на всю ширину екрану з відступами по бокам */
+  input[type="text"],
+  button {
+    width: 100%;
+    margin-left: 8px; /* Відступ зліва */
+    margin-right: 8px; /* Відступ справа */
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    padding-bottom: 60px; /* додаємо відповідний відступ знизу main, щоб уникнути перекриття футером */
+  }
+
+  .footer-brand {
+    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
+  }
+
+  /* Збільшення розмірів зображення */
+  img.avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Розтягнення кнопки та поля для вводу на всю ширину екрану з відступами по бокам */
+  input[type="text"],
+  button {
+    width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
   }
 }
