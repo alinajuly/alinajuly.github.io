@@ -8,13 +8,16 @@ body, html {
   flex-direction: column;
 }
 
+header {
+  margin-bottom: 100px;
+}
+
 main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   height: 100vh;
   overflow-y: auto;
-  margin-top: 100px;
 }
 
 .book-image {
