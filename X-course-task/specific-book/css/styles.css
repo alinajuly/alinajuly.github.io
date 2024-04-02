@@ -8,10 +8,6 @@ body, html {
   flex-direction: column;
 }
 
-header {
-  margin-bottom: 100px;
-}
-
 main {
   display: flex;
   justify-content: flex-start;
@@ -19,6 +15,10 @@ main {
   height: 100vh;
   overflow-y: auto;
 }
+
+ .container {
+  margin-top: 100px;
+ }
 
 .book-image {
   flex: 1; 
@@ -56,12 +56,6 @@ main {
   word-wrap: break-word; 
   overflow-wrap: break-word; 
   text-align: justify; 
-}
-
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 
 @media (max-width: 767px) {
