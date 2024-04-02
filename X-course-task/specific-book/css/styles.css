@@ -2,18 +2,15 @@ body, html {
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
+  flex-grow: 1;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 100vh;
-  overflow-y: auto;
+  flex-direction: column;
 }
 
  .container {
@@ -56,6 +53,10 @@ main {
   word-wrap: break-word; 
   overflow-wrap: break-word; 
   text-align: justify; 
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 @media (max-width: 767px) {
