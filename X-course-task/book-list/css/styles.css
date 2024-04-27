@@ -1,0 +1,81 @@
+body, html {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  width: 100%;
+}
+
+.search-container,
+.sort-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  margin-right: 10px;
+  justify-content: flex-start;
+}
+
+.sort-container {
+  margin-left: 10px;
+  justify-content: flex-end;
+}
+
+
+.books-container {
+  flex-basis: 100%;
+  margin-top: 20px;
+}
+
+.book {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: calc(33.33% - 40px);
+  box-sizing: border-box;
+}
+
+.book-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.book-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.book-title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.book-author,
+.book-price {
+  margin-top: 5px;
+}
+
+.book-description {
+  margin-top: 10px;
+}
+
+ .container {
+  margin-top: 100px;
+ }
+
+footer {
+  flex-shrink: 0;
+}
