@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const updateTotalPrice = () => {
     let count = parseInt(countInput.value, 10);
-    if (isNaN(count) || count < 1) {
-      count = 1;
+    if (isNaN(count) || count < 0) {
+      count = 0;
       countInput.value = count;
     } else if (count > maxAllowedBooks) {
       count = prevCount !== null ? prevCount : maxAllowedBooks;
