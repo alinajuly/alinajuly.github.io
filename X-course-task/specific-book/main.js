@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const price = document.getElementById('price');
   const totalPrice = document.getElementById('totalPrice');
 
-  const maxAllowedBooks = 42;
+  let maxAllowedBooks = 0;
   let prevCount = null;
 
   const updateTotalPrice = () => {
     let count = parseInt(countInput.value, 10);
     if (isNaN(count) || count < 1) {
       count = 1;
-      countInput.value = count;
+      countInput.value = '';
     } else if (count > maxAllowedBooks) {
       count = prevCount !== null ? prevCount : maxAllowedBooks;
       countInput.value = count;
@@ -21,16 +21,48 @@ document.addEventListener('DOMContentLoaded', () => {
     totalPrice.textContent = parseInt(price.textContent, 10) * count;
   };
 
-  updateTotalPrice();
+  fetch("../books.json")
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      data.books.forEach(book => {
+        if (book.amount > maxAllowedBooks) {
+          maxAllowedBooks = book.amount;
+        }
+      });
+      updateTotalPrice();
+    })
+    .catch(error => {
+      console.error("Error loading books:", error);
+    });
 
-  countInput.addEventListener('input', updateTotalPrice);
+  countInput.addEventListener('input', () => {
+    let count = parseInt(countInput.value, 10);
+    if (isNaN(count) || count < 1) {
+      count = 1;
+      countInput.value = '';
+      alert("Please enter a valid quantity.");
+    } else if (count > maxAllowedBooks) {
+      countInput.value = prevCount !== null ? prevCount : maxAllowedBooks;
+      alert("There is no such quantity available.");
+    } else {
+      prevCount = count;
+    }
+    updateTotalPrice();
+  });
 
   countInput.addEventListener('keydown', event => {
     if (event.key === 'ArrowUp') {
-      countInput.value = parseInt(countInput.value, 10) + 1;
+      let count = parseInt(countInput.value, 10) + 1;
+      if (count > maxAllowedBooks) {
+        count = maxAllowedBooks;
+        alert("There is no such quantity available.");
+      }
+      countInput.value = count;
       updateTotalPrice();
     } else if (event.key === 'ArrowDown') {
-      countInput.value = Math.max(parseInt(countInput.value, 10) - 1, 1);
+      let count = Math.max(parseInt(countInput.value, 10) - 1, 1);
+      countInput.value = count;
       updateTotalPrice();
     }
   });
