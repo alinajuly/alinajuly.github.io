@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isNaN(count) || count < 1) {
       count = 1;
       countInput.value = '';
+    } else if (count === 0) {
+      count = 1;
     } else if (count > maxAllowedBooks) {
       count = prevCount !== null ? prevCount : maxAllowedBooks;
       countInput.value = count;
@@ -40,8 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let count = parseInt(countInput.value, 10);
     if (isNaN(count) || count < 1) {
       count = 1;
-      countInput.value = '';
-      alert("Please enter a valid quantity.");
+      countInput.value = '';;
+    } else if (count === 0) {
+      count = 1;
     } else if (count > maxAllowedBooks) {
       countInput.value = prevCount !== null ? prevCount : maxAllowedBooks;
       alert("There is no such quantity available.");
