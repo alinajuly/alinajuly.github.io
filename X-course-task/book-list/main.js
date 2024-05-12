@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sortSelect = document.getElementById("sort");
   const booksContainer = document.getElementById("books-container");
   searchInput.addEventListener("input", updateBookCatalog);
-  searchInput.addEventListener("blur", updateBookCatalog);
+  searchInput.addEventListener("change", updateBookCatalog);
   let books = []; // Оголошуємо змінну books на рівні модуля для доступу в усіх функціях
 
   fetch("../books.json")
