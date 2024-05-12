@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <p class="book-description">${book.shortDescription}</p>
                   <div class="book-details">
                     <p class="book-price">Price: $${book.price}</p>
-                    <button class="btn btn-warning view-button" type="button">View</button>
+                    <button class="btn btn-warning btn-view" type="button" data-book-id="${book.id}">View</button>
                   </div>
               `;
               bookElement.innerHTML = bookHTML;
@@ -98,4 +98,16 @@ document.addEventListener("DOMContentLoaded", function () {
           booksContainer.appendChild(bookRow);
       }
   }
+
+  // Додаємо прослуховувач події кліку до контейнера booksContainer
+  booksContainer.addEventListener('click', function(event) {
+    // Перевіряємо, чи клікнули на кнопку "View"
+    if (event.target.classList.contains('btn-view')) {
+        // Отримуємо id книги, яку потрібно відобразити
+        const bookId = event.target.dataset.bookId;
+        // Переходимо на сторінку конкретної книги
+        window.location.href = `../specific-book/index.html?id=${bookId}`;
+    }
+  });
+
 });
