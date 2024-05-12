@@ -4,21 +4,18 @@ body, html {
   padding: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Змінено з min-height на height */
+  height: 100vh;
 }
 
 main {
+  flex: 1;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Змінено з center на flex-start для початкового вирівнювання */
+  align-items: flex-start;
   flex-wrap: wrap;
   padding: 40px;
   width: 100%;
-  height: calc(100vh - 100px); /* Фіксована висота від верхнього краю екрану до нижнього краю футера */
-  overflow-y: auto; /* Додано прокрутку, якщо контент перевищує розмір висоти */
-  flex-grow: 1; /* Додано flex-grow для розтягування на всю доступну висоту */
 }
-
 
 .search-container {
   justify-content: flex-start;
@@ -68,4 +65,56 @@ main {
 
 footer {
   flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding: 20px;
+  }
+  
+  .book {
+    width: calc(50% - 20px);
+  }
+
+  .footer-brand {
+    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
+  }
+
+  .input-wrapper,
+  .btn {
+    margin-left: 8px;
+    margin-right: 8px;
+    width: calc(100% - 16px); /* ширина елементу за мінусом відступів */
+  }
+
+  .navbar,
+  footer {
+    width: 100%; /* Налаштовуємо ширину навбару і футера на всю ширину екрана */
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    padding: 10px;
+  }
+  
+  .book {
+    width: calc(100% - 20px);
+  }
+
+  .footer-brand {
+    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
+  }
+
+  .input-wrapper,
+  .btn {
+    margin-left: 8px;
+    margin-right: 8px;
+    width: calc(100% - 16px); /* ширина елементу за мінусом відступів */
+  }
+
+  .navbar,
+  footer {
+    width: 100%; /* Налаштовуємо ширину навбару і футера на всю ширину екрана */
+  }
 }
