@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search");
   const sortSelect = document.getElementById("sort");
   const booksContainer = document.getElementById("books-container");
+  searchInput.addEventListener("input", updateBookCatalog);
+  searchInput.addEventListener("blur", updateBookCatalog);
   let books = []; // Оголошуємо змінну books на рівні модуля для доступу в усіх функціях
 
   fetch("../books.json")
@@ -14,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error("Error loading books:", error);
       });
 
-  // Пошук книг за назвою
-  searchInput.addEventListener("input", function () {
+  // Функція для оновлення каталогу книг
+  function updateBookCatalog() {
       const searchTerm = searchInput.value.toLowerCase();
       const filteredBooks = books.filter((book) =>
           book.title.toLowerCase().includes(searchTerm)
@@ -26,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
           buildBookCatalog(filteredBooks);
       }
-  });
+  }
 
   // Сортування книг за ціною
   sortSelect.addEventListener("change", function () {
