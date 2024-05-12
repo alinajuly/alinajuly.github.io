@@ -71,25 +71,32 @@ footer {
   main {
     padding: 20px;
   }
+
+  .search-container,
+  .sort-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
   
   .book {
-    flex-basis: calc(100% - 20px); /* Змінюємо ширину книги для мобільних пристроїв */
+    flex-basis: calc(100% - 20px);
   }
 
   .input-wrapper,
   .btn {
     margin-left: 8px;
     margin-right: 8px;
-    width: calc(100% - 16px); /* ширина елементу за мінусом відступів */
+    width: calc(100% - 16px);
   }
 
   .navbar,
   footer {
-    width: 100% !important; /* Налаштовуємо ширину навбару і футера на всю ширину екрана */
+    width: 100% !important;
   }
 
   .footer-brand {
-    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
+    font-size: 0.8rem;
   }
 }
 
@@ -97,24 +104,31 @@ footer {
   main {
     padding: 20px;
   }
+
+  .search-container,
+  .sort-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
   
   .book {
-    flex-basis: calc(100% - 20px); /* Змінюємо ширину книги для дуже малих екранів */
+    flex-basis: calc(100% - 20px);
   }
 
   .input-wrapper,
   .btn {
     margin-left: 8px;
     margin-right: 8px;
-    width: calc(100% - 16px); /* ширина елементу за мінусом відступів */
+    width: calc(100% - 16px);
   }
 
   .navbar,
   footer {
-    width: 100%; /* Налаштовуємо ширину навбару і футера на всю ширину екрана */
+    width: 100%;
   }
 
   .footer-brand {
-    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
+    font-size: 0.8rem;
   }
 }
