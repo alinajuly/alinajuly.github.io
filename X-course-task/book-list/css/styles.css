@@ -4,35 +4,29 @@ body, html {
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh; /* Змінено з min-height на height */
 }
 
 main {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Змінено з center на flex-start для початкового вирівнювання */
   flex-wrap: wrap;
   padding: 40px;
   width: 100%;
+  height: calc(100vh - 100px); /* Фіксована висота від верхнього краю екрану до нижнього краю футера */
+  overflow-y: auto; /* Додано прокрутку, якщо контент перевищує розмір висоти */
+  flex-grow: 1; /* Додано flex-grow для розтягування на всю доступну висоту */
 }
 
-.search-container,
-.sort-container {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
 
 .search-container {
-  margin-right: 10px;
   justify-content: flex-start;
 }
 
 .sort-container {
-  margin-left: 10px;
   justify-content: flex-end;
 }
-
 
 .books-container {
   flex-basis: 100%;
@@ -71,10 +65,6 @@ main {
 .book-description {
   margin-top: 10px;
 }
-
- .container {
-  margin-top: 100px;
- }
 
 footer {
   flex-shrink: 0;

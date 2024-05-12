@@ -20,7 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const filteredBooks = books.filter((book) =>
       book.title.toLowerCase().includes(searchTerm)
     );
-    buildBookCatalog(filteredBooks);
+    if (filteredBooks.length === 0) {
+      // Якщо не знайдено книг, встановлюємо повідомлення "Book not found" червоним кольором
+      booksContainer.innerHTML = "<p style='color: red; text-align: center;'>Book not found</p>";
+    } else {
+      buildBookCatalog(filteredBooks);
+    }
   });
 
   // Сортування книг за ціною
