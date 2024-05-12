@@ -26,14 +26,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // Сортування книг за ціною
   sortSelect.addEventListener("change", function () {
     const sortOrder = sortSelect.value;
-    const sortedBooks = [...books]; // Клонуємо масив книг
-    sortedBooks.sort((a, b) => {
-      if (sortOrder === "asc") {
-        return a.price - b.price;
-      } else {
-        return b.price - a.price;
-      }
-    });
+    let sortedBooks;
+
+    // Перевіряємо, чи обране значення "default"
+    if (sortOrder === "default") {
+      // Якщо так, сортування не застосовується
+      sortedBooks = books;
+    } else {
+      // В іншому випадку, сортуємо книги за вказаним порядком
+      sortedBooks = [...books]; // Клонуємо масив книг
+      sortedBooks.sort((a, b) => {
+        if (sortOrder === "asc") {
+          return a.price - b.price;
+        } else {
+          return b.price - a.price;
+        }
+      });
+    }
+
     buildBookCatalog(sortedBooks);
   });
 
