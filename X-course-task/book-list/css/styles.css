@@ -34,7 +34,7 @@ main {
   border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 20px;
-  width: calc(33.33% - 40px);
+  flex-basis: calc(33.33% - 40px);
   box-sizing: border-box;
 }
 
@@ -73,11 +73,7 @@ footer {
   }
   
   .book {
-    width: calc(50% - 20px);
-  }
-
-  .footer-brand {
-    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
+    flex-basis: calc(100% - 20px); /* Змінюємо ширину книги для мобільних пристроїв */
   }
 
   .input-wrapper,
@@ -89,21 +85,21 @@ footer {
 
   .navbar,
   footer {
-    width: 100%; /* Налаштовуємо ширину навбару і футера на всю ширину екрана */
+    width: 100% !important; /* Налаштовуємо ширину навбару і футера на всю ширину екрана */
+  }
+
+  .footer-brand {
+    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
   }
 }
 
 @media (max-width: 320px) {
   main {
-    padding: 10px;
+    padding: 20px;
   }
   
   .book {
-    width: calc(100% - 20px);
-  }
-
-  .footer-brand {
-    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
+    flex-basis: calc(100% - 20px); /* Змінюємо ширину книги для дуже малих екранів */
   }
 
   .input-wrapper,
@@ -116,5 +112,9 @@ footer {
   .navbar,
   footer {
     width: 100%; /* Налаштовуємо ширину навбару і футера на всю ширину екрана */
+  }
+
+  .footer-brand {
+    font-size: 0.8rem; /* Зменшуємо розмір шрифту для тексту футера на мобільних пристроях */
   }
 }
