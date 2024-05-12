@@ -63,6 +63,12 @@ main {
   margin-top: 10px;
 }
 
+.book-details {
+  display: flex; /* Додано */
+  justify-content: space-between; /* Додано */
+  align-items: center; /* Додано */
+}
+
 footer {
   flex-shrink: 0;
 }

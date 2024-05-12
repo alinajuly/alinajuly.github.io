@@ -83,7 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
                   <h3 class="book-title">${book.title}</h3>
                   <p class="book-author">Author: ${book.author}</p>
                   <p class="book-description">${book.shortDescription}</p>
-                  <p class="book-price">Price: $${book.price}</p>
+                  <div class="book-details">
+                    <p class="book-price">Price: $${book.price}</p>
+                    <button class="btn btn-warning view-button" type="button">View</button>
+                  </div>
               `;
               bookElement.innerHTML = bookHTML;
 
