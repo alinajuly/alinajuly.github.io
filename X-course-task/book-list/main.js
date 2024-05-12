@@ -58,10 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
       
       // Визначення кількості книг в рядку в залежності від ширини екрана
       let booksPerRow = 3; // За замовчуванням - 3 книги в рядку
-      if (window.matchMedia("(max-width: 767px)").matches) {
+      if (window.innerWidth <= 767) {
           booksPerRow = 1; // При ширині екрана до 767px - 1 книга в рядку
-      }
-      if (window.matchMedia("(max-width: 320px)").matches) {
+      } else if (window.innerWidth <= 320) {
           booksPerRow = 1; // При ширині екрана до 320px - 1 книга в рядку
       }
       
@@ -94,10 +93,4 @@ document.addEventListener("DOMContentLoaded", function () {
           booksContainer.appendChild(bookRow);
       }
   }
-
-  // Додаємо прослуховувач події зміни розміру вікна
-  window.addEventListener('resize', function() {
-      // Оновлюємо каталог книг
-      buildBookCatalog(books);
-  });
 });
