@@ -83,9 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
       if (isNaN(count) || count < 1) {
         count = 1;
-      } else if (count > maxAllowedBooks) {
-        count = prevCount || maxAllowedBooks; // Встановлюємо попереднє значення, якщо воно існує, або максимально допустиме
-        alert("There is no such quantity available.");
+      } else if (count >= maxAllowedBooks) {
+        count = maxAllowedBooks; // Встановлюємо максимально допустиме значення
+        setTimeout(() => {
+          alert("This is the maximum number of books.");
+        }, 0); // Викликаємо alert після оновлення значення count
       }
     
       countInput.value = count; // Оновлюємо значення введеного числа
@@ -97,10 +99,14 @@ document.addEventListener('DOMContentLoaded', () => {
     countInput.addEventListener('input', updateTotalPrice);
 
     countInput.addEventListener('keydown', event => {
-      if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
-        if (count > maxAllowedBooks) {
-          countInput.value = prevCount || maxAllowedBooks;
-          alert("There is no such quantity available.");
+      const count = parseInt(countInput.value, 10); // Отримуємо поточне значення поля вводу
+      const maxAllowedBooks = parseInt(countInput.max, 10); // Отримуємо максимально допустиме значення
+      const prevCount = parseInt(countInput.dataset.prevCount, 10); // Отримуємо попереднє значення, якщо воно було збережено
+
+      if (event.key === 'ArrowUp') {
+        if (count >= maxAllowedBooks) {
+          countInput.value = maxAllowedBooks;
+          alert("This is the maximum number of books.");
         } else {
           updateTotalPrice();
         }
