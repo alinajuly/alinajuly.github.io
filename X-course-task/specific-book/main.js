@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const prevCount = parseInt(countInput.dataset.prevCount, 10); // Отримуємо попереднє значення, якщо воно було збережено
     
       if (isNaN(count) || count < 1) {
-        count = 1;
+        count = ""
       } else if (count >= maxAllowedBooks) {
         count = maxAllowedBooks; // Встановлюємо максимально допустиме значення
         setTimeout(() => {
